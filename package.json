@@ -11,14 +11,11 @@
   "description": "NPM wrapper for Webdriver Chromium-based Edge driver",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "files": [
-    "lib/**/*"
-  ],
   "repository": "git@github.com:dmlemeshko/ms-edge-driver.git",
   "author": "<dima.inspired@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
-    "postinstall": "node lib/install.js",
+    "postinstall": "ls && npm run build && node lib/install.js",
     "test": "jest",
     "coverage": "jest --coverage",
     "build": "rm -rf lib bin msedgedriver.zip paths.json && tsc -p .",
