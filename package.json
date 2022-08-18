@@ -18,8 +18,7 @@
   "author": "<dima.inspired@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
-    "preinstall": "npm run build",
-    "postinstall": "node lib/install.js",
+    "postinstall": "npm run build && node lib/install.js",
     "test": "jest",
     "coverage": "jest --coverage",
     "build": "rm -rf lib bin msedgedriver.zip paths.json && tsc -p .",
